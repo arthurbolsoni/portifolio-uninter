@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Página de portfólio -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthur Bolsoni | Portfólio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Menu do topo -->
+  <header>
+    <nav class="navbar container">
+      <div class="logo">Arthur <span>Xavier</span> Bolsoni</div>
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html" class="active">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao container" style="padding-top:3rem;">
+      <h2 class="titulo-secao">Portfólio</h2>
+      <p class="texto">Alguns projetos. Clique para ver o código no GitHub.</p>
+
+      <!-- meus projetos -->
+      <div class="grid">
+        <div class="card projeto">
+          <h3>Purple Adblock</h3>
+          <span class="linguagem">TypeScript</span>
+          <p>Extensão de navegador para bloqueio de anúncios na Twitch.</p>
+          <a href="https://github.com/arthurbolsoni/Purple-adblock" target="_blank">Ver código →</a>
+        </div>
+
+        <div class="card projeto">
+          <h3>Gym Timer</h3>
+          <span class="linguagem">Flutter / Dart</span>
+          <p>App Android na Google Play para cronometrar treinos.</p>
+          <a href="https://github.com/arthurbolsoni/gym-cronometro" target="_blank">Ver código →</a>
+        </div>
+
+        <div class="card projeto">
+          <h3>CRUD Backend NestJS</h3>
+          <span class="linguagem">NestJS</span>
+          <p>API RESTful de exemplo com NestJS e boas práticas.</p>
+          <a href="https://github.com/arthurbolsoni/crud-backend-nestjs" target="_blank">Ver código →</a>
+        </div>
+
+        <div class="card projeto">
+          <h3>Wallpaper Slider</h3>
+          <span class="linguagem">Rust</span>
+          <p>App desktop em Rust para trocar papéis de parede.</p>
+          <a href="https://github.com/arthurbolsoni/wallpaperslider" target="_blank">Ver código →</a>
+        </div>
+      </div>
+
+      <p class="texto" style="margin-top:1.5rem; text-align:center;">
+        Todos os projetos em
+        <a href="https://github.com/arthurbolsoni" target="_blank">github.com/arthurbolsoni</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="https://github.com/arthurbolsoni" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/arthurbolsoni/" target="_blank">LinkedIn</a>
+      <p>&copy; 2026 Arthur Xavier Bolsoni.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

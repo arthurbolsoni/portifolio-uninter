@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Página inicial - Sobre mim -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthur Bolsoni | Sobre mim</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Menu do topo -->
+  <header>
+    <nav class="navbar container">
+      <div class="logo">Arthur <span>Xavier</span> Bolsoni</div>
+      <!-- botão do menu no celular -->
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- a página atual fica com a classe active -->
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="active">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Apresentação -->
+    <section class="hero container">
+      <img class="foto" src="img/foto.png" alt="Foto de Arthur Xavier Bolsoni" />
+      <h1>Arthur Xavier Bolsoni</h1>
+      <p class="cargo">Desenvolvedor Full Stack Sênior</p>
+      <p class="local">Bento Gonçalves, RS – Brasil</p>
+    </section>
+
+    <section class="secao container">
+      <h2 class="titulo-secao">Sobre mim</h2>
+      <p class="texto">
+        Sou Desenvolvedor Full Stack Sênior com mais de 8 anos de experiência,
+        especializado em Node.js, NestJS e Vue.js. Trabalho com aplicações na
+        nuvem, integrações de APIs e arquitetura de microsserviços.
+      </p>
+      <p class="texto">
+        Gosto de transformar problemas complexos em soluções simples e estou
+        sempre aprendendo novas tecnologias, como IA/LLM e Rust.
+      </p>
+
+      <!-- Hobbies -->
+      <h2 class="titulo-secao" style="margin-top:2rem;">Hobbies</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="icone">💻</div>
+          <h3>Open Source</h3>
+          <p class="texto">Mantenho extensões e ferramentas de código aberto.</p>
+        </div>
+        <div class="card">
+          <div class="icone">🏋️</div>
+          <h3>Academia</h3>
+          <p class="texto">Treino de força (e criei um app de cronômetro de treinos).</p>
+        </div>
+        <div class="card">
+          <div class="icone">🎮</div>
+          <h3>Tecnologia</h3>
+          <p class="texto">Curioso por automação, hardware e games.</p>
+        </div>
+      </div>
+
+      <!-- Habilidades -->
+      <h2 class="titulo-secao" style="margin-top:2rem;">Habilidades</h2>
+      <div class="tags">
+        <span class="tag">Node.js</span>
+        <span class="tag">NestJS</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Vue.js</span>
+        <span class="tag">Python</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <a href="https://github.com/arthurbolsoni" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/arthurbolsoni/" target="_blank">LinkedIn</a>
+      <p>&copy; 2026 Arthur Xavier Bolsoni.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

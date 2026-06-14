@@ -1,0 +1,347 @@
+/* Estilos do meu portfólio */
+
+/* Cores do site (paleta Tokyo Night) */
+:root {
+  --cor-fundo: #1a1b26;            /* fundo */
+  --cor-superficie: #24283b;       /* cards e menu */
+  --cor-texto: #c0caf5;            /* texto */
+  --cor-texto-suave: #a9b1d6;      /* texto secundário */
+  --cor-destaque: #7aa2f7;         /* azul (cor principal) */
+  --cor-destaque-escuro: #bb9af7;  /* roxo (usado no hover) */
+  --cor-contraste: #1a1b26;        /* texto escuro em cima do azul */
+  --cor-borda: #3b4261;
+  --sombra: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  /* segura o rodapé no fim mesmo com pouca coisa na página */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* o conteúdo cresce e empurra o rodapé pra baixo */
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cor-destaque-escuro);
+}
+
+/* Container central para limitar a largura do conteúdo */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---------- Cabeçalho e menu (fixo no topo em todas as páginas) ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--cor-superficie);
+  box-shadow: var(--sombra);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--cor-destaque);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.menu a {
+  color: var(--cor-texto);
+  font-weight: 500;
+}
+
+/* Link da página atual em destaque */
+.menu a.active {
+  color: var(--cor-destaque);
+  border-bottom: 2px solid var(--cor-destaque);
+}
+
+/* Botão do menu que aparece no celular */
+.btn-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-menu span {
+  width: 26px;
+  height: 3px;
+  background-color: var(--cor-texto);
+  border-radius: 2px;
+}
+
+/* ---------- Seção de destaque (hero) ---------- */
+.hero {
+  text-align: center;
+  padding: 2rem 0 1.2rem;
+}
+
+.hero .foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;             /* recorta a imagem no círculo sem distorcer */
+  margin: 0 auto 1rem;
+  display: block;
+  border: 3px solid var(--cor-destaque);
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.hero .cargo {
+  color: var(--cor-destaque);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.hero .local {
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Títulos e textos das seções ---------- */
+.secao {
+  padding: 2.5rem 0;
+}
+
+.titulo-secao {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--cor-destaque);
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.texto {
+  color: var(--cor-texto-suave);
+  margin-bottom: 1rem;
+}
+
+/* Caixa usada nas seções */
+.card {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Grade de hobbies */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.grid .card {
+  text-align: center;
+}
+
+.grid .icone {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tags de habilidades */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  background-color: var(--cor-destaque);
+  color: var(--cor-contraste);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Formação (lista simples) ---------- */
+.item-formacao {
+  margin-bottom: 1.5rem;
+}
+
+.item-formacao .periodo {
+  color: var(--cor-destaque);
+  font-weight: bold;
+}
+
+.item-formacao h3 {
+  margin: 0.2rem 0;
+}
+
+.item-formacao .instituicao {
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Portfólio (grade de projetos) ---------- */
+.projeto h3 {
+  margin-bottom: 0.4rem;
+}
+
+.projeto .linguagem {
+  color: var(--cor-destaque);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.projeto p {
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  margin: 0.6rem 0 1rem;
+}
+
+/* ---------- Contato e formulário ---------- */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.info-contato p {
+  margin-bottom: 1rem;
+}
+
+.form-grupo {
+  margin-bottom: 1.2rem;
+}
+
+.form-grupo label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Campo com erro (marcado pelo JavaScript) */
+.form-grupo input.erro,
+.form-grupo textarea.erro {
+  border-color: #e74c3c;
+}
+
+.mensagem-erro {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  display: block;
+  min-height: 1rem;
+}
+
+.btn {
+  background-color: var(--cor-destaque);
+  color: var(--cor-contraste);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--cor-destaque-escuro);
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+  background-color: var(--cor-superficie);
+  border-top: 1px solid var(--cor-borda);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+  color: var(--cor-texto-suave);
+}
+
+footer a {
+  margin: 0 0.5rem;
+}
+
+/* ---------- Responsivo (celular) ---------- */
+@media (max-width: 768px) {
+  /* mostra o botão hambúrguer */
+  .btn-menu {
+    display: flex;
+  }
+
+  /* menu vira lista vertical, escondido até o JS abrir */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: var(--cor-superficie);
+    padding: 1rem 0;
+    gap: 1rem;
+    box-shadow: var(--sombra);
+  }
+
+  .menu.aberto {
+    display: flex;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+}

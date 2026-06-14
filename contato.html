@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Página de contato -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arthur Bolsoni | Contato</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Menu do topo -->
+  <header>
+    <nav class="navbar container">
+      <div class="logo">Arthur <span>Xavier</span> Bolsoni</div>
+      <button class="btn-menu" id="btn-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html" class="active">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="secao container" style="padding-top:3rem;">
+      <h2 class="titulo-secao">Contato</h2>
+      <p class="texto">Preencha o formulário ou use os canais abaixo.</p>
+
+      <div class="contato-grid">
+        <!-- meus contatos -->
+        <div class="info-contato">
+          <p>📧 arthurbolsoni@hotmail.com</p>
+          <p>📱 +55 51 98260-1477</p>
+          <p>💼 <a href="https://www.linkedin.com/in/arthurbolsoni/" target="_blank">/in/arthurbolsoni</a></p>
+          <p>🐙 <a href="https://github.com/arthurbolsoni" target="_blank">/arthurbolsoni</a></p>
+          <p>📍 Bento Gonçalves, RS</p>
+        </div>
+
+        <!-- novalidate desliga a validação do navegador pra eu validar pelo JS -->
+        <form id="form-contato" class="card" novalidate>
+          <div class="form-grupo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome" />
+            <span class="mensagem-erro"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" />
+            <span class="mensagem-erro"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="5" placeholder="Sua mensagem..."></textarea>
+            <span class="mensagem-erro"></span>
+          </div>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="https://github.com/arthurbolsoni" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/arthurbolsoni/" target="_blank">LinkedIn</a>
+      <p>&copy; 2026 Arthur Xavier Bolsoni.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
